@@ -57,6 +57,7 @@ body {
     gap: 20px;
 }
 
+
 .header__s3__currency button{
     background-color: transparent;
     border: none;
@@ -87,6 +88,8 @@ body {
     cursor: pointer;
     background-color: #333333;
 }
+
+
 
 /* Header text */
 
@@ -208,4 +211,121 @@ body {
 .advertisement__sec button:hover{
     cursor: pointer;
     background-color: #eae7e7;
+}
+
+.recommended-1{
+    padding: 40px;
+}
+
+.recommended-1__container {
+    display: flex;  /* Align images in a single row */ /* Adds spacing between images */
+    justify-content: space-evenly;
+    gap: 60px; /* Center align */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.beach {
+    position: relative;
+    border-radius: 15px; /* Rounded corners */
+    flex-grow: 1;
+    overflow: hidden;
+    flex-basis: 20%;
+}
+
+.beach img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fit properly */
+    border-radius: 15px;
+}
+
+.beach__title {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+
+.beach::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Controls shadow height */
+    color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.recommended-2{
+    padding: 40px;
+}
+
+.recommended-2__container {
+    display: flex; 
+    justify-content: space-evenly;
+    gap: 60px; /* Center align */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.place {
+    position: relative;
+ /* Adjust width as needed */ /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    flex-grow: 1;
+    flex-basis: 20%;
+}
+
+.place img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover; /* Ensure images fit properly */
+    border-radius: 15px;
+}
+
+.place p{
+    margin: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .beach{
+        flex-basis: 40%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .place{
+        flex-basis: 40%;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .advertisement{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+    .header__s2{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header__s3 .header__s3__sign-in{
+        display: block;
+    }
 }
